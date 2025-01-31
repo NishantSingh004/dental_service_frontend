@@ -41,17 +41,12 @@ export class NavbarComponent {
   }
 
   ngOnInit(): void {
-    this.ngZone.runOutsideAngular(() => {
-      if (!this.userService.user) {
-        const userData = localStorage.getItem('user');
-        if (userData) {
-          this.userService.user = JSON.parse(userData);
-        } else {
-          this.router.navigate(['/login']);
-        }
-      }
-    });
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      this.userService.user = JSON.parse(userData);
+    }
   }
+
   logout() {
     this.ngZone.run(() => {
       this.userService.user = undefined;
