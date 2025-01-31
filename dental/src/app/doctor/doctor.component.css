@@ -1,0 +1,211 @@
+
+.hero-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/doctors.jpg') center/cover no-repeat;
+  background-size: cover; 
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.hero-container button{
+  color: #fff;
+}
+h1{
+  margin-top: 2rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+h2{
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin-container {
+  width: 100%; 
+  padding: 20px;
+  background: #f7efe8; 
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  height: 800px;
+
+}
+
+.list {
+  width: 100%;
+  background: #f7efe8;
+  padding-top: 2rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(3, 108, 95);
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: space-around; 
+  height: 112vh;
+  margin-bottom: 4rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 1rem;
+}
+
+.card-wrapper {
+  flex: 1 1 calc(100% - 50px); 
+  width: calc(100% - 16px); 
+  margin-top: 1rem;
+}
+
+
+mat-card {
+  margin-bottom: 1.5rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+mat-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.card-header {
+  background-color: rgb(3, 108, 95); 
+  color: white;
+  padding: 10px 15px;
+}
+
+mat-card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+mat-card-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #80cbc4;
+}
+
+mat-card-content {
+  padding: 15px;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+mat-card-actions {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-actions button {
+  width: 50%; 
+  background-color: rgb(252, 151, 114) !important;
+  color: rgb(3, 108, 95) !important;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+mat-card-actions button:hover {
+ 
+  transform: scale(1.05); 
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .admin-container {
+    padding: 1.5rem 10px 0.8rem 10px; 
+  }
+h1{
+  font-size: 2.8rem;
+}
+h2{
+  font-size: 2.2rem;
+}
+  .list {
+    padding-bottom: 1rem;
+  }
+
+  .heading {
+    font-size: 2rem; 
+  }
+
+  .card-container {
+    height: auto; 
+    overflow-y: visible; 
+    flex-direction: column; 
+    gap: 1rem; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  .card-wrapper {
+    .card-wrapper {
+      flex: 1 1 calc(100% - 50px); 
+      max-width: calc(100% - 50px); 
+      margin-top: 1rem;
+    }
+  }
+
+  mat-card {
+    margin-bottom: 1.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  .card-header {
+    padding: 10px; 
+  }
+
+  mat-card-title {
+    font-size: 1.1rem; 
+  }
+
+  mat-card-subtitle {
+    font-size: 0.9rem; 
+  }
+
+  mat-card-content {
+    padding: 10px; 
+    font-size: 0.9rem; 
+    line-height: 1.4; 
+  }
+  mat-card-actions button {
+    width: 90%;
+    font-size: 0.9rem; 
+    padding: 8px; 
+  }
+}

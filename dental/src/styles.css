@@ -1,0 +1,39 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;  /* Ensure full height */
+  width: 100%;   /* Ensure full width */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+} */
+
+
+/* Define global font styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+p, button, small, a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}

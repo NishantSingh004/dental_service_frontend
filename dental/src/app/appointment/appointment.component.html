@@ -1,0 +1,152 @@
+<div class="hero-container">
+  <h1>Appointment</h1>
+  <p>Your Smile, Our Priority – Book Your Appointment Today!</p>
+  <!-- <nav>
+    <button mat-button routerLink="/home">Home</button> ->
+    <button mat-button routerLink="/appointment">Appointment</button>
+  </nav> -->
+</div>
+
+<div class="container">
+  <div class="para">
+    <div class="heading">
+      <h2>Schedule Your Visit Today!</h2>
+    </div>
+    <div class="sub-para">
+      <small
+        >At Healthy Teeth Dental, we are committed to providing exceptional care
+        tailored to your needs. Booking an appointment is simple and ensures you
+        receive the personalized attention you deserve. From routine cleanings
+        to advanced dental treatments, our skilled team is here to help you
+        achieve a healthy, confident smile. Don’t wait—take the first step
+        towards better oral health by reserving your spot now!</small
+      >
+    </div>
+    <div class="operating-hours">
+      <h3>Operating Hours</h3>
+      <p>Monday - Friday: 10:00 AM to 05:00 PM</p>
+      <p>Saturday: 10:00 AM to 03:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+  <div class="form-container">
+    <div class="title">Book an Appoinment</div>
+    <form [formGroup]="appointment">
+      <mat-form-field class="patient" appearance="outline">
+        <mat-label>Patient Name</mat-label>
+        <input type="text" matInput formControlName="name" />
+
+        <mat-error *ngIf="appointment.controls.name.invalid">
+          {{
+            appointment.controls.name.hasError("required")
+              ? "Name is required"
+              : ""
+          }}
+        </mat-error>
+      </mat-form-field>
+      <div class="sub-form">
+        <mat-form-field class="sub-forms" appearance="outline">
+          <mat-label>Phone</mat-label>
+          <input type="tel" matInput formControlName="phone" />
+          <mat-error *ngIf="appointment.get('phone')?.invalid">
+            {{
+              appointment.get("phone")?.hasError("required")
+                ? "Phone No is required"
+                : ""
+            }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="sub-forms" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" />
+          <mat-error *ngIf="appointment.get('email')?.invalid">
+            {{
+              appointment.get("email")?.hasError("required")
+                ? "email is required"
+                : "Please enter a valid email"
+            }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="sub-form">
+        <mat-form-field class="sub-forms" appearance="outline">
+          <mat-label>Date of birth</mat-label>
+          <input
+            matInput
+            [matDatepicker]="dobPicker"
+            [min]="minDate"
+            [max]="maxDate"
+            formControlName="dob"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="dobPicker"
+          ></mat-datepicker-toggle>
+
+          <mat-datepicker #dobPicker></mat-datepicker>
+          <mat-error *ngIf="appointment.get('dob')?.invalid">
+            {{
+              appointment.get("dob")?.hasError("required")
+                ? "Date of birth is required"
+                : ""
+            }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="sub-forms" appearance="outline">
+          <mat-label>Appointment date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="appointmentDatePicker"
+            [min]="minDate"
+            [max]="maxDate"
+            formControlName="date"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="appointmentDatePicker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #appointmentDatePicker></mat-datepicker>
+          <mat-error *ngIf="appointment.get('date')?.invalid">
+            {{
+              appointment.get("date")?.hasError("required")
+                ? "date is required"
+                : ""
+            }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="patient" appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea
+          matInput
+          placeholder="Type your message here..."
+          rows="4"
+          cols="50"
+          formControlName="message"
+        ></textarea>
+        <mat-error *ngIf="appointment.get('message')?.invalid">
+          {{
+            appointment.get("message")?.hasError("required")
+              ? "message is required"
+              : ""
+          }}
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <div class="buttons-container">
+      <button
+        (click)="createAppointment()"
+        mat-raised-button
+        class="apointment-button"
+        [disabled]="appointment.invalid"
+      >
+        Confirm Booking
+      </button>
+    </div>
+  </div>
+</div>
+<app-info-section></app-info-section>
+<app-features></app-features>

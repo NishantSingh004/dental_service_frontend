@@ -1,0 +1,18 @@
+<div class="hero-container">
+  <h1>Welcome back!</h1>
+  <h2>Admin</h2>
+  <small
+    ><p>
+      Your efforts keep the clinic running smoothly. Let's make today
+      productive!
+    </p>
+  </small>
+</div>
+
+<div class="bar">
+  <router-outlet></router-outlet>
+
+  <div class="right-bar">
+    <app-admin-sidebar [totalAppointments]="patientCount"></app-admin-sidebar>
+  </div>
+</div>

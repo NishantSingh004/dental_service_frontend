@@ -1,0 +1,7 @@
+<div class="container">
+  <app-navbar></app-navbar>
+  <div class="sub-container" [@fadeAnimation]="getRouteAnimationState()">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>

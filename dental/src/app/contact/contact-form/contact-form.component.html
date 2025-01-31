@@ -1,0 +1,107 @@
+<div class="contact-container">
+  <div class="sub-contact">
+    <div class="text">
+      <div class="sub-text">
+        <small>Contact Us</small>
+        <h2>Get In Touch With Us!</h2>
+        <small>
+          Whether you have a question about treatments, bills, or medical
+          insurance, please contact us using the information below.
+        </small>
+      </div>
+    </div>
+    <div class="details">
+      <div class="contact-details">
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.269674588134!2d77.05080102721447!3d28.622943292653525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03c2392b7719%3A0x8d2f5e8d0c91c62f!2sJ2VV%2BVXC%2C%20Ranhola%20Rd%2C%20Shiva%20Enclave%2C%20Hastsal%2C%20Delhi%2C%20110066!5e0!3m2!1sen!2sin!4v1619386896128!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div>
+          <p><i class="fas fa-phone"></i> CALL: 1-800-123-9999</p>
+          <p>
+            <i class="fas fa-envelope"></i> healthyteethdental50&#64;gmail.com
+          </p>
+          <p><i class="fas fa-home"></i> RANHOLA RD, SHIVA ENCLAVE</p>
+        </div>
+      </div>
+      <div class="form">
+        <form [formGroup]="contactForm">
+          <div class="matforms">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" />
+              <mat-error *ngIf="contactForm.get('name')?.invalid">
+                {{
+                  contactForm.get("name")?.hasError("required")
+                    ? "Name is required"
+                    : ""
+                }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" />
+              <mat-error *ngIf="contactForm.get('email')?.invalid">
+                {{
+                  contactForm.get("email")?.hasError("required")
+                    ? "Email is required"
+                    : "Please enter a valid email"
+                }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="matforms">
+            <mat-form-field appearance="outline">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone" />
+              <mat-error *ngIf="contactForm.get('phone')?.invalid">
+                {{
+                  contactForm.get("phone")?.hasError("required")
+                    ? "Phone No is required"
+                    : ""
+                }}
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Subject</mat-label>
+              <input matInput formControlName="subject" />
+              <mat-error *ngIf="contactForm.get('subject')?.invalid">
+                {{
+                  contactForm.get("subject")?.hasError("required")
+                    ? "Subject is required"
+                    : ""
+                }}
+              </mat-error>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>How can we help you?</mat-label>
+            <textarea matInput formControlName="message" rows="5"></textarea>
+            <mat-error *ngIf="contactForm.get('message')?.invalid">
+              {{
+                contactForm.get("message")?.hasError("required")
+                  ? "Message is required"
+                  : ""
+              }}
+            </mat-error>
+          </mat-form-field>
+          <div class="btn">
+            <button mat-raised-button color="primary" (click)="contacts()">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

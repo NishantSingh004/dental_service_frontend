@@ -1,0 +1,142 @@
+.hero-container {
+  background-size: cover; 
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.clinic-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.clinic-info-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; 
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.hero-container button{
+  color: #fff;
+}
+
+
+.container {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/cliniclogin.jpeg') center/cover no-repeat;
+height: 600px;
+  flex-direction: column;
+  flex-wrap:wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  background-color: transparent;
+  box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  max-width: 25vw;
+  position: relative; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+mat-form-field {
+  width: 20vw;
+}
+mat-label{
+  color:#ffffff ;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+input{
+  color: white !important;
+}
+mat-error{
+  color: #fff;
+}
+.buttons-container > p {
+  margin-top: 10px;
+}
+
+button.login-button {
+  background-color: rgb(252, 151, 114) ;
+  color: rgb(3, 108, 95);
+}
+button.create {
+
+  color: rgb(3, 108, 95);
+}
+h1{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .container {
+    flex-direction: column; 
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .hero-container {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+   }
+  .form-container::before {
+    background-size: 80%; 
+    background-position: center 25px;
+
+  }
+  .form-container {
+    margin-top: 5vh; 
+    margin-bottom: 5vh;
+    padding: 30px; 
+    max-width: 80vw;
+  }
+
+  mat-form-field {
+    width: 100%; 
+  }
+
+  .title {
+    font-size: 18px; 
+  }
+
+  .buttons-container {
+    width: 100%;
+  }
+
+  button.login-button {
+    width: 100%; 
+  }
+}

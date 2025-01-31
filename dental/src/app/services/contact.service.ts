@@ -1,0 +1,15 @@
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ContactService {
+  private httpClient = inject(HttpClient);
+  private apiUrl = environment.apiUrl;
+
+  public contact(newObj: any) {
+    return this.httpClient.post(`${this.apiUrl}/contact`, newObj);
+  }
+}

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="clinic-info">
+    <h2 class="clinic-info-header">This is for Clinic Use Only</h2>
+  </div>
+  <div class="form-container">
+    <div class="title">Login</div>
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input matInput formControlName="email" />
+
+        <mat-error *ngIf="loginForm.controls.email.invalid">
+          {{
+            loginForm.controls.email.hasError("required")
+              ? "Email is required"
+              : "Please enter a valid email"
+          }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input type="password" matInput formControlName="password" />
+        <mat-error *ngIf="loginForm.get('password')?.invalid">
+          {{
+            loginForm.get("password")?.hasError("required")
+              ? "password is required"
+              : "Password should be atleast 6 characters long"
+          }}
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <div class="buttons-container">
+      <button (click)="login()" mat-raised-button class="login-button">
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+<app-clinic-info></app-clinic-info>

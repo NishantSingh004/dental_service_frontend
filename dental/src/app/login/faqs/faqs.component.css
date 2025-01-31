@@ -1,0 +1,140 @@
+.hero-container {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  background-color: rgb(3, 108, 95);
+  position: relative;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+ width: 1200px;
+ color: white;
+
+}
+
+h1{
+  letter-spacing: 3px;
+}
+
+
+small{
+  font-size: 1.2rem;
+ 
+  color: rgb(252, 151, 114);
+}
+
+
+.subquote{
+  width:800px;
+  font-size: 1.2rem;
+  margin-bottom:2rem;
+  display: block;
+  letter-spacing: 1.2px;
+  line-height: 1.8rem;
+}
+.hours-container {
+  background: #f7efe8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section {
+  margin: 2rem auto;
+}
+
+mat-card {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1.6rem;
+  width: 900px;
+  height: 1040px;
+}
+
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #004d40;
+  text-align: left;
+}
+
+mat-card-content p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+mat-card-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #444444;
+}
+
+mat-card-content ul li {
+  list-style: disc;
+  margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+
+  .hero-container {
+    height: 400px; 
+  }
+  .content{
+    padding-top: 2rem;
+  }
+  .content h1 {
+    font-size: 2.5rem; 
+    width: 100%; 
+    color: white;
+    margin-bottom: 1rem;
+    
+  }
+
+  .subquote {
+    width: 100%; 
+    font-size: 1rem; 
+    margin-bottom: 1.5rem; 
+  }
+
+ 
+  .hours-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+  }
+  mat-card {
+    padding: 1.5rem; 
+    width: 100%;
+    height: auto; 
+  }
+
+  mat-card-title {
+    font-size: 1.6rem; 
+  }
+
+  mat-card-content p {
+    font-size: 0.9rem; 
+  }
+
+  mat-card-content ul {
+    font-size: 0.9rem; 
+  }
+}

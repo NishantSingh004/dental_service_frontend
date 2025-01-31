@@ -1,0 +1,39 @@
+<div class="feedback-section">
+  <div class="head">
+    <h2>Feedback from Our Real Clients</h2>
+    <p>Real Stories, Real Impact: See What Others Are Saying!</p>
+  </div>
+
+  <div
+    class="carousel"
+    #carousel
+    (pointerdown)="onPointerDown($event, carousel)"
+    (pointermove)="onPointerMove($event, carousel)"
+    (pointerup)="onPointerUp(carousel)"
+    (pointerleave)="onPointerUp(carousel)"
+    (scroll)="onScroll()"
+  >
+    <div class="card-container" *ngFor="let feedback of feedbacks">
+      <mat-card>
+        <div class="image">
+          <img [src]="feedback.image" alt="Client photo" />
+        </div>
+        <mat-card-content>
+          <p>{{ feedback.message }}</p>
+          <h3>{{ feedback.name }}</h3>
+          <small>{{ feedback.role }}</small>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Dots for groups of 3 cards -->
+  <div class="dots">
+    <span
+      class="dot"
+      *ngFor="let _ of [].constructor(dotCount); let i = index"
+      [class.active]="i === currentIndex"
+      (click)="scrollToFeedback(i, carousel)"
+    ></span>
+  </div>
+</div>

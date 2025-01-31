@@ -1,0 +1,75 @@
+.stats-container {
+  background-color: rgb(3, 108, 95);
+  padding: 20px;
+  color: #fff; 
+  height: 300px;
+  display: flex;
+  gap: 6rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: none;
+  width: 300px;
+}
+
+mat-card h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+mat-card p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.icon {
+  font-size: 30px;
+  color: rgb(3, 108, 95);
+  width: 60px ;
+  height: 60px;
+  padding-top: 16px;
+  border-radius: 50%;
+  background-color: rgb(198, 248, 242);
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .stats-container {
+    flex-direction: column; 
+    gap: 2rem; 
+    padding: 20px 10px; 
+    height: auto; 
+  }
+
+  mat-card {
+    width: 90%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
+
+  mat-card h2 {
+    font-size: 20px; 
+    margin: 5px 0; 
+  }
+
+  mat-card p {
+    font-size: 14px; 
+  }
+
+  .icon {
+    font-size: 24px; 
+    width: 50px; 
+    height: 50px;
+    padding-top: 12px;
+  }
+}
+

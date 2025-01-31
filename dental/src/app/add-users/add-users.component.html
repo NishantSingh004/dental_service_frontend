@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="form-container">
+    <div class="title">Add User</div>
+    <form [formGroup]="createUser">
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="createUser.get('email')?.invalid">
+          {{
+            createUser.get("email")?.hasError("required")
+              ? "Email is required"
+              : "Please enter a valid email"
+          }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input type="password" matInput formControlName="password" />
+        <mat-error *ngIf="createUser.get('password')?.invalid">
+          {{
+            createUser.get("password")?.hasError("required")
+              ? "password is required"
+              : "Password should be atleast 6 characters long"
+          }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select Role</mat-label>
+        <mat-select formControlName="role">
+          @for (Role of Roles; track Role) {
+          <mat-option [value]="Role.value">{{ Role.viewValue }}</mat-option>
+          }
+        </mat-select>
+        <mat-error *ngIf="createUser.get('role')?.invalid">
+          {{
+            createUser.get("role")?.hasError("role") ? "role is required" : ""
+          }}
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <div class="buttons-container">
+      <button
+        (click)="create()"
+        mat-raised-button
+        class="login-button"
+        [disabled]="createUser.invalid"
+      >
+        Add User
+      </button>
+    </div>
+  </div>
+</div>

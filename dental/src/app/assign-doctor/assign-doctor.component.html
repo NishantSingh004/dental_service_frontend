@@ -1,0 +1,31 @@
+<div class="list">
+  <h2 class="heading">Assign Doctor</h2>
+</div>
+<div class="admin-container">
+  <div class="card-container">
+    <!-- Loop through the list of doctors -->
+    <div *ngFor="let doctor of doctors" class="card-wrapper">
+      <mat-card class="doctor-card">
+        <mat-card-header class="card-header">
+          <mat-card-title>{{ doctor.name }}</mat-card-title>
+          <mat-card-subtitle>{{ doctor.email }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div><strong>Phone:</strong> {{ doctor.phone }}</div>
+          <div><strong>Specialty:</strong> {{ doctor.role }}</div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="assignDoctorToPatient(doctor)"
+          >
+            Assign
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+.appointment-container {
+  text-align: center;
+  padding: 50px;
+  background-color: rgb(3, 108, 95);
+  height: 340px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.header .divider {
+  height: 1px;
+  width: 50px;
+  background-color: rgb(252, 151, 114);
+  margin: 0 10px;
+}
+
+.header .text {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-button {
+  width: 250px;
+  margin-bottom: 20px;
+  background: rgb(252, 151, 114);
+  color: rgb(3, 108, 95);
+}
+.button-sec{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 20px;
+margin-right: 0.8rem;
+}
+.or-section {
+  display: flex;
+  align-items: center;
+margin-left: 0.8rem;
+  gap: 10px;
+}
+
+.call-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.call-link mat-icon {
+  margin-right: 5px;
+}
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .appointment-container {
+    padding: 20px; 
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .header .divider {
+    width: 30px; 
+    margin: 5px 0; 
+  }
+
+  h1 {
+    font-size: 20px; 
+    margin: 10px 0; 
+    line-height: 1.4; 
+  }
+
+  .actions {
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 20px; 
+  }
+
+  .book-button {
+    width: 100%; 
+    max-width: 300px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button-sec {
+    margin: 0; 
+    justify-content: center; 
+  }
+
+  .or-section {
+    flex-direction: row; 
+    gap: 5px;
+    margin-left: 0; 
+  }
+
+  .call-link {
+    font-size: 14px; 
+    align-items: center; 
+  }
+
+  .call-link mat-icon {
+    font-size: 16px; 
+  }
+}

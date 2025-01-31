@@ -1,0 +1,36 @@
+<div class="hero-container">
+  <div class="content">
+    <div class="content">
+      <small>We Prioritize Your</small>
+      <h1>Your <span>Smile</span> is Our Priority</h1>
+    </div>
+  </div>
+  <p class="subquote">Your Trusted Dentist, Right Here</p>
+
+  <button mat-raised-button class="start" routerLink="/appointment">
+    Book Appointment
+  </button>
+
+  <div class="hours-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Opening Hours</mat-card-title>
+        <mat-card-subtitle>
+          Visit us during our convenient hours for top-quality dental care
+          tailored to your needs
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <div [ngStyle]="{ 'background-color': elementColor }" class="color-box">
+          <span>{{ elementText }}</span>
+        </div>
+      </mat-card-actions>
+      <mat-card-content>
+        <p><strong>Monday - Friday:</strong> 10:00am to 05:00pm</p>
+        <p><strong>Saturday:</strong> 10:00am to 03:00pm</p>
+        <p><strong>Sunday:</strong> Closed</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="empty"></div>

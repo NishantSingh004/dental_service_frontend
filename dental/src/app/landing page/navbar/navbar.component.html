@@ -1,0 +1,59 @@
+<mat-toolbar>
+  <!-- Logo and Title -->
+  <span class="mat-toolbar-row">
+    <mat-icon>health_and_safety</mat-icon> Healthy Teeth Dental
+  </span>
+  <span class="spacer"></span>
+
+  <!-- Navigation Links for Larger Screens -->
+  <nav class="nav-links">
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/about">About Us</button>
+    <button mat-button routerLink="/service">Services</button>
+    <button mat-button routerLink="/contact">Contact</button>
+    <button mat-button routerLink="/appointment">Appointment</button>
+    <button mat-button routerLink="/login" *ngIf="!isUserLoggedIn()">
+      Sign in
+    </button>
+    <button mat-button (click)="logout()" *ngIf="isUserLoggedIn()">
+      Sign out
+    </button>
+
+    <!-- Hamburger Menu for Smaller Screens -->
+  </nav>
+  @if(!menuClick){
+  <button class="menu-button" mat-icon-button (click)="menuClicks()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  }@else {
+  <button class="menu-button" mat-icon-button (click)="menuClicks()">
+    <mat-icon>close</mat-icon>
+  </button>
+  }
+
+  <div class="desktop-menu" [class.mobile_menu]="menuClick">
+    <button (click)="close()" mat-button routerLink="/">Home</button>
+    <button (click)="close()" mat-button routerLink="/about">About Us</button>
+    <button (click)="close()" mat-button routerLink="/service">Services</button>
+    <button (click)="close()" mat-button routerLink="/contact">Contact</button>
+    <button (click)="close()" mat-button routerLink="/appointment">
+      Appointment
+    </button>
+    <button
+      (click)="close()"
+      mat-button
+      routerLink="/login"
+      *ngIf="!isUserLoggedIn()"
+    >
+      Sign in
+    </button>
+    <button
+      (click)="close()"
+      mat-button
+      (click)="logout()"
+      *ngIf="isUserLoggedIn()"
+    >
+      Sign out
+    </button>
+  </div>
+</mat-toolbar>

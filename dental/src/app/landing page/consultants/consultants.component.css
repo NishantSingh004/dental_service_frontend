@@ -1,0 +1,184 @@
+.consultants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: white;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.consultants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.consultant-card {
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.consultant-card:hover {
+  transform: translateY(-10px);
+}
+
+img {
+  min-height: 300px; 
+  object-fit:fill;
+width: 100%; 
+  border-radius: 15px;
+}
+
+mat-card{
+  text-align: center;
+  width: 280px;
+  border-radius: 30px !important;
+  
+}
+
+mat-card-image {
+  height: 100px !important;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+
+mat-card-content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+mat-card-content p {
+  margin: 0.3rem 0;
+  color: #666;
+}
+
+mat-card-content .specialization {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  outline: none !important;
+}
+
+button {
+  font-size: 0.9rem;
+  font-weight: bold ;
+  color: black;
+  outline: none !important;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease ;
+  display: block;
+}
+
+mat-card:hover button {
+  color: rgb(2, 66, 59);
+}
+
+
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .consultants {
+    padding: 2rem 1rem; 
+    padding-bottom: 4rem;
+  }
+.header{
+  width: 300px;
+}
+  .header h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 0.8rem;
+  }
+
+  .header p {
+    font-size: 0.9rem; 
+    line-height: 1.4;
+  }
+
+  .consultants-grid {
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+    max-width: 100%; 
+  }
+
+  .consultant-card {
+    width: 90%; 
+    margin: 0 auto; 
+    border-radius: 10px; 
+  }
+
+  img{
+    width: 100%;
+  }
+
+  mat-card-image{
+    width: 100% !important;
+  }
+
+  mat-card {
+    width: 100%; 
+    
+  }
+
+  mat-card-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  mat-card-content p {
+    font-size: 0.8rem; 
+    margin: 0.2rem 0;
+  }
+
+  mat-card-content .specialization {
+    font-size: 0.8rem; 
+    color: #666; 
+  }
+
+  mat-card-actions {
+    padding: 0.5rem !important;
+  }
+
+  button {
+    font-size: 0.8rem; 
+    padding: 6px;
+  }
+  mat-card:hover .pro{
+    width: 30%;
+  
+  }
+  
+}

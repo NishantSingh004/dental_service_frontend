@@ -1,0 +1,206 @@
+.hero-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/smile1.jpg') center/cover no-repeat;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  
+  position: relative;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+ width: 1200px;
+ color: white;
+
+}
+.head{
+  display: flex;
+}
+.content span{
+  color:rgb(3, 108, 95) ;
+
+}
+h1{
+  letter-spacing: 3px;
+}
+
+
+small{
+  font-size: 1.2rem;
+ 
+  color: rgb(252, 151, 114);
+}
+
+
+.subquote{
+  width:800px;
+  font-size: 1.2rem;
+  margin-bottom:2rem;
+  display: block;
+  letter-spacing: 1.2px;
+  line-height: 1.8rem;
+}
+.start {
+  background-color: rgb(252, 151, 114)!important;
+  padding: 0.8rem 1.5rem !important;
+  color: rgb(3, 108, 95) !important;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.start:hover {
+  background-color: transparent !important;
+  border: 1px solid white;
+}
+
+
+.hours-container {
+  position: absolute; 
+  bottom: -210px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 10;
+  width: 90%;
+  max-width: 900px;
+}
+
+mat-card {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: black;
+}
+
+mat-card-title {
+  margin-bottom: 1rem;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: center;
+}
+button{
+  padding: 10px 20px; 
+  margin-top: 20px; 
+}
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+mat-card-content p{
+  margin-bottom: 0.5rem;
+}
+.color-box {
+  transition: background-color 0.5s ease;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  color: black;
+  margin-top: 1rem;
+}
+
+.empty{
+  height: 200px;
+  background: #f7efe8;
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .hero-container {
+    .hero-container {      
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+  }
+  .content{
+    display: flex;
+    margin-top: 1.8rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+  }
+  
+  .content h1 {
+    font-size: 2.6rem; 
+    width: 95%;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    letter-spacing: 2.8px;
+    margin-top: 1rem;
+  }
+  
+  small {
+    font-size: 0.9rem; 
+    display: block; 
+    margin-bottom: 0.5rem; 
+  }
+
+  .subquote {
+    width: 350px; 
+    font-size: 0.8rem;
+    word-spacing: 0.5px;
+    text-align: center;
+    line-height: 22.4px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+
+  }
+
+.start {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    margin-top: 1rem;
+  }
+
+  .hours-container {
+    bottom: -270px; 
+    left: 50%;
+    z-index: 10;
+    width: 90%;
+    max-width: 900px;
+    letter-spacing: none;
+  }
+
+  mat-card {
+    padding: 1rem;
+    border-radius: 10px; 
+  }
+
+  mat-card-title {
+    font-size: 1.2rem;
+  }
+mat-card-content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+
+}
+  mat-card-content p {
+    width: 270px;
+    font-size: 0.75rem; 
+  }
+
+  mat-card-header, mat-card-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}

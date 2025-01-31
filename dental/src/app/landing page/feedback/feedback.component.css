@@ -1,0 +1,198 @@
+.feedback-section {
+  text-align: center;
+  padding: 2rem;
+  background: #f7efe8;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  max-width: 960px; 
+  margin: 0 auto; 
+  cursor: pointer;
+}
+
+p{
+  margin-bottom: 3rem;
+}
+
+.card-container {
+  flex: 0 0 300px; 
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+mat-card {
+  width: 280px;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  color: black;}
+
+  mat-card-content{
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  mat-card-content p{
+    width: 270px;
+  }
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: rgb(3, 108, 95);
+}
+
+.image {
+  border-radius: 40px;
+  top: 10px;
+  height: 12vh; 
+  padding: 1px;
+}
+
+img {
+  border-radius: 110%;
+  object-fit: cover;
+  height: 80px; 
+  width: 90px;
+}
+mat-card:hover h3 {
+  color: rgb(3, 108, 95);
+}
+h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 128px) and (max-width: 900px) {
+  .feedback-section {
+    padding: 2rem 1rem 1rem 1rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+h2{
+  font-size: 2.2rem;
+  letter-spacing: 1.5px;
+
+}
+
+  .head{
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 80%;
+  }
+ 
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    max-width: 100%;
+    gap: 0rem; 
+    margin: 0 auto;
+    cursor: pointer;
+    scroll-snap-type: none; 
+  }
+
+  .card-container {
+    flex: 0 0 auto; 
+    display: block; 
+    margin-bottom: 1rem; 
+    gap: 1rem;
+  }
+
+  mat-card {
+    width: 90%; 
+    margin-left:8px ;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    gap: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items:center ;
+  }
+
+  mat-card-content{
+    width: 80%;
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    height: 10px; 
+    width: 10px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #007bff;
+  }
+
+  .image {
+    border-radius: 40px;
+    height: 12vh;
+    padding: 1px;
+    margin-bottom:1rem ;
+
+  }
+
+  img {
+    border-radius: 110%;
+    height: 80px; 
+    width: 90px; 
+  }
+
+  mat-card:hover h3 {
+    color: #3a5f8c;
+  }
+
+  p {
+    margin-bottom: 2rem; 
+    font-size: 14px; 
+  }
+
+  .feedback-section h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
+  }
+
+  .feedback-section p {
+    font-size: 14px; 
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,41 @@
+<div class="list">
+  <h2 class="heading">Patient List</h2>
+</div>
+<div class="admin-container">
+  <div class="card-container">
+    <!-- Loop through the list of patients -->
+    <div *ngFor="let patient of appointments" class="card-wrapper">
+      <mat-card class="patient-card">
+        <mat-card-header class="card-header">
+          <div class="pat">
+            <mat-card-title>{{ patient.name }}</mat-card-title>
+            <mat-card-subtitle>{{ patient.email }}</mat-card-subtitle>
+          </div>
+
+          <div class="del" (click)="deleteAppointment(patient._id)">
+            <i class="fas fa-trash"></i>
+          </div>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div><strong>Phone:</strong> {{ patient.phone }}</div>
+          <div><strong>DOB:</strong> {{ patient.dob | date }}</div>
+          <div>
+            <strong>Appointment Date:</strong> {{ patient.date | date }}
+          </div>
+          <div><strong>Message:</strong> {{ patient.message }}</div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="assignDoctor(patient)"
+          >
+            Assign Doctor
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="hero-container">
+  <h1>Welcome back!</h1>
+  <h2>Dr. {{ docname }}</h2>
+  <small
+    ><p>
+      Your efforts keep the clinic running smoothly. Let's make today
+      productive!
+    </p>
+  </small>
+</div>
+
+<div class="bar">
+  <div class="list">
+    <h2 class="heading">Patient List</h2>
+  </div>
+
+  <div class="admin-container">
+    <div *ngIf="appointments.length > 0; else noAppointments">
+      <div *ngFor="let patient of appointments">
+        <mat-card class="patient-card">
+          <mat-card-header class="card-header">
+            <mat-card-title>{{ patient.name }}</mat-card-title>
+            <mat-card-subtitle>{{ patient.email }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <div><strong>Phone:</strong> {{ patient.phone }}</div>
+            <div><strong>DOB:</strong> {{ patient.dob | date }}</div>
+            <div>
+              <strong>Appointment Date:</strong> {{ patient.date | date }}
+            </div>
+            <div><strong>Message:</strong> {{ patient.message }}</div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+
+    <ng-template #noAppointments>
+      <p>No patients have been assigned to you yet.</p>
+    </ng-template>
+  </div>
+</div>

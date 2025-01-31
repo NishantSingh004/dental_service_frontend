@@ -1,0 +1,58 @@
+<div class="dashboard-container">
+  <!-- Button Group -->
+  <div class="button-group">
+    <button
+      mat-raised-button
+      color="primary"
+      class="dashboard-button"
+      routerLink="/admin/patient-list"
+    >
+      Appointments
+    </button>
+
+    <button
+      (click)="onDoctorClick()"
+      mat-raised-button
+      color="accent"
+      class="dashboard-button"
+      routerLink="/admin/doctors-list"
+    >
+      Doctors
+    </button>
+
+    <button
+      (click)="onDoctorClick()"
+      mat-raised-button
+      color="accent"
+      class="dashboard-button"
+      routerLink="/admin/add-doctor"
+    >
+      Add Doctor
+    </button>
+
+    <button
+      mat-raised-button
+      color="warn"
+      class="dashboard-button"
+      routerLink="/admin/add-user"
+    >
+      Add Users
+    </button>
+  </div>
+
+  <!-- Calendar -->
+  <div class="dashboard-cards">
+    <mat-card>
+      <mat-card-title>Total Appointments</mat-card-title>
+      <mat-card-content>{{ totalAppointments }}</mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Active Doctors</mat-card-title>
+      <mat-card-content>45</mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>New Users</mat-card-title>
+      <mat-card-content>15</mat-card-content>
+    </mat-card>
+  </div>
+</div>
