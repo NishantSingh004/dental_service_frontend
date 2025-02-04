@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/contact.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/contact.jpg') center/cover no-repeat;
   background-size: cover; 
   height: 600px;
   display: flex;
@@ -43,11 +43,14 @@ small{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
     align-items: center;
   }
 .content p{
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 30px;
+  width: 100%;
+
 }
   .content h1 {
     font-size: 2.6rem; 

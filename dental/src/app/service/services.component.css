@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('/dentist1.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/dentist1.jpg') center/cover no-repeat;
   background-size: cover; 
   height: 600px;
   display: flex;
@@ -50,7 +50,6 @@ small{
   align-items: center;
   width: 1200px;
   bottom: -650px; 
-  /* background: #f7efe8; */
   gap: 2rem;
 }
 i{
@@ -66,7 +65,6 @@ i{
 }
 .fa-teeth-open{
   font-size: 3rem;
-  /* padding: 20px; */
 padding-right: 30px;
 padding-top: 20px;
 }
@@ -146,25 +144,20 @@ a{
   color:rgb(3, 108, 95) ;
 }
 .learn-container {
-  text-align: center; /* Center the content */
-  margin-top: 10px; /* Space above the link */
+  text-align: center; 
+  margin-top: 10px; 
 }
 .learn {
   display: inline-block;
-  /* font-weight: bold; */
   text-decoration: none;
-  margin-bottom: 3px; /* Space between the link and the line */
+  margin-bottom: 3px; 
 }
 mat-card-content .line{
   width: 0%;
   margin: 0 auto;
   background-color:rgb(3, 108, 95) ;
-  /* text-align: center; */
-    /* width: 50%; */
     height: 2px;
-     /* Adjust color as needed */
-    /* Space between link and line */
-    transition: width 0.4s ease-in-out    
+   transition: width 0.4s ease-in-out    
 }
 
 mat-card:hover .line{
@@ -191,15 +184,11 @@ mat-card:hover .line{
 @media screen and (min-width: 128px) and (max-width: 900px) {
   .hero-container {
     padding: 20px auto; 
-    /* padding-bottom; */
-
     margin-bottom: 20rem; 
-    /* object-fit: cover; */
   }
   .empty{
     background: #f7efe8;
     margin: 0;
-/* border: 1px solid red; */
     height:2240px ;
   }
   .content {
@@ -212,18 +201,18 @@ mat-card:hover .line{
   }
   
   .content h1 {
-    font-size: 2.6rem; /* Maintain a slightly larger font size for emphasis */
-    font-weight: bold; /* Keep bold text */
-    margin-bottom:2rem; /* Adjust spacing */
-    letter-spacing: 2px; /* Slightly enhance letter spacing */
-    line-height: 1.5; /* Maintain line height for readability */
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-bottom:2rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
     width: 100%;
   }
 
   small {
-    font-size: 0.9rem; /* Slightly larger for visibility */
-    display: block; /* Ensure it appears above the heading */
-    margin-bottom: 0.5rem; /* Add spacing below small text */
+    font-size: 0.9rem; 
+    display: block; 
+    margin-bottom: 0.5rem; 
   }
   span{
     font-size: 2rem;
@@ -237,18 +226,17 @@ mat-card:hover .line{
 
 
   .subquote {
-    font-size: 1rem; /* Reduce subquote font size */
-    width: 90%; /* Make it fit smaller screens */
+    font-size: 1rem; 
+    width: 90%; 
     line-height: 1.4rem;
     margin-bottom: 1rem;
   }
 
   .start {
-    padding: 0.6rem 1rem; /* Adjust button padding */
-    font-size: 0.9rem; /* Reduce button font size */
+    padding: 0.6rem 1rem; 
+    font-size: 0.9rem; 
   }
 
-  /* Services Section */
   .service {
     width: 100%;
     height: 2400px;
@@ -257,7 +245,6 @@ mat-card:hover .line{
     align-items: center;
     flex-direction: column;
     background: #f7efe8;
-/* margin-bottom: 13rem; */
 padding-top:24rem ;
 padding-bottom:4rem ;
     bottom: -2432px; 
@@ -266,7 +253,7 @@ padding-bottom:4rem ;
   }
 
   .sub-service {
-    flex-direction: column; /* Stack cards vertically */
+    flex-direction: column; 
     width:100%; 
     display: flex;
     justify-content: center;
@@ -278,38 +265,38 @@ padding-bottom:4rem ;
   }
 
   mat-card {
-    width: 80%; /* Make cards adapt to screen width */
-    height: auto; /* Let cards scale with content */
-    padding: 1rem; /* Adjust padding for compactness */
-    margin: 0 auto; /* Center align cards */
+    width: 80%; 
+    height: auto; 
+    padding: 1rem; 
+    margin: 0 auto; 
   }
 
   mat-card-content p {
-    font-size: 0.9rem; /* Scale down paragraph text */
-    width: 100%; /* Adjust width */
+    font-size: 0.9rem; 
+    width: 100%; 
   }
 
   mat-card-header h2 {
-    font-size: 1.2rem; /* Adjust header size */
+    font-size: 1.2rem; 
   }
 
   .learn-container {
-    margin-top: 1rem; /* Add spacing above the learn more link */
+    margin-top: 1rem; 
   }
 
   .line {
-    width: 20%; /* Adjust underline width */
+    width: 20%; 
   }
 
   mat-card:hover .line {
-    width: 30%; /* Slightly increase hover effect */
+    width: 30%; 
   }
 
   .service-content i,
   .service-content svg {
-    width: 80px; /* Reduce icon size */
-    height: 80px; /* Scale icon height */
-    font-size: 2.8rem; /* Adjust font size */
+    width: 80px; 
+    height: 80px; 
+    font-size: 2.8rem; 
   }
   
 
