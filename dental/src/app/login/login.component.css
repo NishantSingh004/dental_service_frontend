@@ -29,7 +29,7 @@
 
 .container {
   display: flex;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/cliniclogin.jpeg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/cliniclogin.webp') center/cover no-repeat;
 height: 600px;
   flex-direction: column;
   flex-wrap:wrap;

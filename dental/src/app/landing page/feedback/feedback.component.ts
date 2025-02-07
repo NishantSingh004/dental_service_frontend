@@ -19,49 +19,49 @@ export class FeedbackComponent implements AfterViewInit {
 
   feedbacks = [
     {
-      image: 'image/happy1.jpg',
+      image: 'image/happy1.webp',
       message:
         'Professional staff made me feel relaxed and at ease during my visit.',
       name: 'Emma',
       role: 'Sales Director, GreenTech',
     },
     {
-      image: 'image/happy2.jpg',
+      image: 'image/happy2.webp',
       message:
         'I had a painless experience, thanks to the gentle care provided by the dentist.',
       name: 'Olivia',
       role: 'Manager, Bright Horizons',
     },
     {
-      image: 'image/happy3.jpg',
+      image: 'image/happy3.webp',
       message:
         'Exceptionally clean and hygienic surroundings made my dental visit reassuring.',
       name: 'Charlotte',
       role: 'HR Manager, Apex Innovations',
     },
     {
-      image: 'image/happy4.jpg',
+      image: 'image/happy4.webp',
       message:
         'The dental procedure was quick, and the overall service was very efficient.',
       name: 'Lily',
       role: 'Manager, BlueWave',
     },
     {
-      image: 'image/happy5.jpg',
+      image: 'image/happy5.webp',
       message:
         'The treatment was swift, and the service exceeded all expectations.',
       name: 'Sophie',
       role: 'Customer Support Lead, Stellar',
     },
     {
-      image: 'image/happy6.jpg',
+      image: 'image/happy6.webp',
       message:
         'The dentist was knowledgeable and took the time to explain everything clearly.',
       name: 'Robert Johnson',
       role: 'Finance Analyst, Global ltd',
     },
     {
-      image: 'image/happy7.jpg',
+      image: 'image/happy7.webp',
       message:
         'I felt at ease throughout my treatment, thanks to the comfortable atmosphere in the clinic.',
       name: 'Amelia',

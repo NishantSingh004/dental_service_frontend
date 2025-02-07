@@ -1,6 +1,6 @@
 
 .hero-container {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/doctors.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/doctors.webp') center/cover no-repeat;
   background-size: cover; 
   height: 600px;
   display: flex;
