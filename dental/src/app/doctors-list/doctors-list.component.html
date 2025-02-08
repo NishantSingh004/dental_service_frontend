@@ -4,7 +4,7 @@
 <div class="admin-container">
   <div class="card-container">
     <!-- Loop through the list of doctors -->
-          <div *ngIf="doctors.length > 0; else noAppointments">
+          <div *ngIf="doctors.length > 0; else noDoctors">
 
     <div *ngFor="let doctor of doctors" class="card-wrapper">
       <mat-card class="doctor-card">
@@ -22,7 +22,7 @@
         </mat-card-content>
       </mat-card>
     </div>
-<ng-template #noAppointments>
+<ng-template #noDoctors>
       <p>No doctors available at the moment.</p>
     </ng-template>
 
