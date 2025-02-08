@@ -16,7 +16,7 @@
     <div class="card-container" *ngFor="let feedback of feedbacks">
       <mat-card>
         <div class="image">
-          <img [src]="feedback.image" alt="Client photo" />
+          <img [src]="feedback.image" loading="lazy" alt="Client photo" />
         </div>
         <mat-card-content>
           <p>{{ feedback.message }}</p>
