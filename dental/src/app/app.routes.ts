@@ -31,82 +31,56 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () =>
-      import('./home/home.component').then((m) => m.HomeComponent),
+    component: HomeComponent,
   },
   {
     path: 'login',
-    loadComponent: () =>
-      import('./login/login.component').then((m) => m.LoginComponent),
+    component: LoginComponent,
   },
+
   {
     path: 'appointment',
-    loadComponent: () =>
-      import('./appointment/appointment.component').then(
-        (m) => m.AppointmentComponent
-      ),
+    component: AppointmentComponent,
   },
   {
     path: 'service',
-    loadComponent: () =>
-      import('./service/services.component').then((m) => m.ServicesComponent),
+    component: ServicesComponent,
   },
   {
     path: 'service/dental-implants',
-    loadComponent: () =>
-      import('./service/dental-implants/dental-implants.component').then(
-        (m) => m.DentalImplantsComponent
-      ),
+    component: DentalImplantsComponent,
   },
   {
     path: 'service/dental-surgery',
-    loadComponent: () =>
-      import('./service/dental-surgery/dental-surgery.component').then(
-        (m) => m.DentalSurgeryComponent
-      ),
+    component: DentalSurgeryComponent,
   },
   {
     path: 'service/whitening-cleaning',
-    loadComponent: () =>
-      import('./service/whitening-cleaning/whitening-cleaning.component').then(
-        (m) => m.WhiteningCleaningComponent
-      ),
+    component: WhiteningCleaningComponent,
   },
   {
     path: 'service/pediatric-dentistry',
-    loadComponent: () =>
-      import('./service/pediatric-dentistry/pediatric-dentistry.component').then(
-        (m) => m.PediatricDentistryComponent
-      ),
+    component: PediatricDentistryComponent,
   },
   {
     path: 'service/smile-design',
-    loadComponent: () =>
-      import('./service/smile-design/smile-design.component').then(
-        (m) => m.SmileDesignComponent
-      ),
+    component: SmileDesignComponent,
   },
   {
     path: 'service/alignment-orthodontics',
-    loadComponent: () =>
-      import('./service/alingment/alingment.component').then(
-        (m) => m.AlingmentComponent
-      ),
+    component: AlingmentComponent,
   },
   {
     path: 'contact',
-    loadComponent: () =>
-      import('./contact/contact.component').then((m) => m.ContactComponent),
+    component: ContactComponent,
   },
   {
     path: 'about',
-    loadComponent: () =>
-      import('./about/about.component').then((m) => m.AboutComponent),
+    component: AboutComponent,
   },
   {
     path: 'admin',
-    loadComponent: () =>
-      import('./admin/admin.component').then((m) => m.AdminComponent),
+    component: AdminComponent,
     children: [
       {
         path: '',
@@ -115,68 +89,30 @@ export const routes: Routes = [
       },
       {
         path: 'patient-list',
-        loadComponent: () =>
-          import('./patient-list/patient-list.component').then(
-            (m) => m.PatientListComponent
-          ),
+        component: PatientListComponent,
       },
       {
         path: 'doctors-list',
-        loadComponent: () =>
-          import('./doctors-list/doctors-list.component').then(
-            (m) => m.DoctorsListComponent
-          ),
+        component: DoctorsListComponent,
       },
       {
         path: 'add-doctor',
-        loadComponent: () =>
-          import('./add-doctor/add-doctor.component').then(
-            (m) => m.AddDoctorsComponent
-          ),
+        component: AddDoctorsComponent,
       },
       {
         path: 'add-user',
-        loadComponent: () =>
-          import('./add-users/add-users.component').then(
-            (m) => m.AddUsersComponent
-          ),
+        component: AddUsersComponent,
       },
       {
         path: 'assign-doctor',
-        loadComponent: () =>
-          import('./assign-doctor/assign-doctor.component').then(
-            (m) => m.AssignDoctorComponent
-          ),
+        component: AssignDoctorComponent,
       },
     ],
   },
-  {
-    path: 'doctor',
-    loadComponent: () =>
-      import('./doctor/doctor.component').then((m) => m.DoctorComponent),
-  },
-  {
-    path: 'faq',
-    loadComponent: () =>
-      import('./login/faqs/faqs.component').then((m) => m.FaqsComponent),
-  },
-  {
-    path: 'clinic-policies',
-    loadComponent: () =>
-      import('./login/clinic-policies/clinic-policies.component').then(
-        (m) => m.ClinicPoliciesComponent
-      ),
-  },
-  {
-    path: 'terms-of-service',
-    loadComponent: () =>
-      import('./login/terms/terms.component').then((m) => m.TermsComponent),
-  },
-  {
-    path: 'privacy-policy',
-    loadComponent: () =>
-      import('./login/privacy-policy/privacy-policy.component').then(
-        (m) => m.PrivacyPolicyComponent
-      ),
-  },
+
+  { path: 'doctor', component: DoctorComponent },
+  { path: 'faq', component: FaqsComponent },
+  { path: 'clinic-policies', component: ClinicPoliciesComponent },
+  { path: 'terms-of-service', component: TermsComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
 ];
