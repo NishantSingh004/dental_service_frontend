@@ -53,6 +53,11 @@ export class AddUsersComponent implements OnInit {
         validators: [Validators.required],
       }),
     });
+    // this.user.getUsers().subscribe({
+    //   next: (res: any) => {
+    //     this.user.setUserCount(res.length);
+    //   },
+    // });
   }
   creations = false;
   create() {
@@ -74,6 +79,7 @@ export class AddUsersComponent implements OnInit {
         if (!res.error) {
           this.user.user = res.response;
           localStorage.setItem('user', JSON.stringify(res.response));
+         
           Swal.fire({
             title: 'Notification',
             text: 'User added successfully!',

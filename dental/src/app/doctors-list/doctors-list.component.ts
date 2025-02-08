@@ -34,6 +34,7 @@ export class DoctorsListComponent {
         this.doctors = res;
         this.doctorService.doctors = res;
         localStorage.setItem('doc', JSON.stringify(res));
+        this.doctorService.setDoctorCount(this.doctors.length);
 
         this.cdr.detectChanges();
       },
@@ -43,6 +44,8 @@ export class DoctorsListComponent {
     this.doctorService.deleteDoctor(doctorId).subscribe({
       next: () => {
         this.doctors = this.doctors.filter((doctor) => doctor._id !== doctorId);
+        this.doctorService.setDoctorCount(this.doctors.length);
+
         Swal.fire({
           title: 'Notification',
           text: 'Doctor deleted successfully!',

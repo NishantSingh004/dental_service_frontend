@@ -4,6 +4,7 @@
 <div class="admin-container">
   <div class="card-container">
     <!-- Loop through the list of patients -->
+     <div *ngIf="appointments.length > 0; else noAppointments">
     <div *ngFor="let patient of appointments" class="card-wrapper">
       <mat-card class="patient-card">
         <mat-card-header class="card-header">
@@ -37,5 +38,9 @@
         </mat-card-actions>
       </mat-card>
     </div>
+    </div>
+     <ng-template #noAppointments>
+      <p>No appointments booked yet.</p>
+    </ng-template>
   </div>
 </div>

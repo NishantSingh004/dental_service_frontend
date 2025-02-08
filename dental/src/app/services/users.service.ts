@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 interface LoginResponse {
@@ -17,6 +17,19 @@ export class UsersService {
 
   public user: any;
 
+  // private userCountSubject = new BehaviorSubject<number>(this.getStoredUserCount());
+  // userCount$ = this.userCountSubject.asObservable();
+
+  // private getStoredUserCount(): number {
+  //   const storedCount = localStorage.getItem('userCount');
+  //   return storedCount ? +storedCount : 0;
+  // }
+
+  // setUserCount(count: number): void {
+  //   this.userCountSubject.next(count);
+  //   localStorage.setItem('userCount', count.toString());
+  // }
+
   isLoggedIn(): boolean {
     return !!localStorage.getItem('token');
   }
@@ -31,6 +44,10 @@ export class UsersService {
     );
   }
 
+
+  // public getUsers() {
+  //   return this.httpClient.get(`${this.apiUrl}/users`, { withCredentials: true });
+  // }
   public createAccount(userObj: any) {
     return this.httpClient.post(`${this.apiUrl}/users/add-user`, userObj, {
       withCredentials: true,
