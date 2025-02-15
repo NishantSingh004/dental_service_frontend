@@ -104,7 +104,9 @@ form {
   width: 100%;
   align-items: center;
 }
-
+mat-form-field{
+  margin-bottom: 12px;
+}
 .buttons-container > p {
   margin-top: 10px;
 }
@@ -131,6 +133,7 @@ button.create {
   padding: 10px 20px; 
   font-size: 16px;
 }
+
 
 .custom-close-button:hover {
   background-color: rgb(240, 140, 100) !important;
