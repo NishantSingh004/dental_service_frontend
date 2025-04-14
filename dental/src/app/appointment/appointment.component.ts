@@ -44,7 +44,11 @@ export class AppointmentComponent {
 
   appointment = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d+$/),
+      Validators.minLength(10),
+    ]),
     email: new FormControl('', [Validators.required, Validators.email]),
     dob: new FormControl('', [Validators.required]),
     date: new FormControl('', [Validators.required]),

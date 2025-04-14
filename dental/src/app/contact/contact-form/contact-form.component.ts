@@ -33,7 +33,11 @@ export class ContactFormComponent {
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    phone: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^\d+$/),
+      Validators.minLength(10),
+    ]),
     subject: new FormControl('', [Validators.required]),
     message: new FormControl('', [Validators.required]),
   });

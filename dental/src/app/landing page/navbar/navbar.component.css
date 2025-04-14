@@ -36,6 +36,10 @@ button {
     padding: 0px; 
     width: 100%;
   }
+
+  .small-nav-sidebar-logo{
+    margin-bottom: 2rem;
+  }
   
   .nav-links {
     display: none;
